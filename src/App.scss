@@ -1,0 +1,35 @@
+@import "./mixins";
+@import url("https://fonts.googleapis.com/css2?family=Neucha&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Neucha", cursive;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+nav {
+  padding: 10px;
+  background-color: rgb(222, 224, 226);
+  ul {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    width: 400px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: space-evenly;
+    text-align: center;
+    h3 {
+      cursor: pointer;
+      font-style: italic;
+    }
+
+    h3:hover {
+        font-weight: bold;
+    }
+  }
+}
