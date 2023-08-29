@@ -17,19 +17,33 @@ nav {
   background-color: rgb(222, 224, 226);
   ul {
     list-style: none;
-    display: grid;
-    gap: 1rem;
-    width: 400px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    justify-content: space-evenly;
-    text-align: center;
-    h3 {
-      cursor: pointer;
-      font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+
+    li, a {
+      display: inline-block;
+      text-align: center;
     }
 
-    h3:hover {
-        font-weight: bold;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      font-weight: bold;
+    }
+
+    a::after {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 1px;
+      overflow: hidden;
+      visibility: hidden;
+      user-select: none;
+      pointer-events: none;
     }
   }
 }

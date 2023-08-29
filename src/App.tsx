@@ -6,16 +6,16 @@ const App = () => {
       <nav>
         <ul>
           <li>
-            <h3>Home</h3>
+            <a href="http://localhost:3000/" title="Home">Home</a>
           </li>
           <li>
-            <h3>Account</h3>
+            <a href="http://localhost:3000/" title="Account">Account</a>
           </li>
           <li>
-            <h3>Basket</h3>
+            <a href="http://localhost:3000/" title="Basket">Basket</a>
           </li>
           <li>
-            <h3>Info</h3>
+            <a href="http://localhost:3000/" title="Info">Info</a>
           </li>
         </ul>
       </nav>
