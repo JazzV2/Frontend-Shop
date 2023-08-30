@@ -1,0 +1,15 @@
+@import "/src/mixins";
+
+header {
+    padding: 20px 15px;
+}
+
+.buttons {
+    margin-top: 2.5rem;
+    @include d-flex(row, space-evenly, center);
+
+    button {
+        font-size: larger;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,42 @@
+nav {
+    padding: 15px;
+    background-color: rgb(222, 224, 226);
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      max-width: 300px;
+  
+      li, a {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+  
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: larger;
+
+      }
+  
+      a:hover {
+        font-weight: bold;
+      }
+  
+      a::after {
+        display: block;
+        content: attr(title);
+        font-weight: bold;
+        height: 1px;
+        overflow: hidden;
+        visibility: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+  }
+  
