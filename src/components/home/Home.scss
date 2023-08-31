@@ -1,4 +1,5 @@
 @import "/src/mixins";
+@import "/src/variables";
 
 header {
     padding: 20px 15px;
@@ -6,10 +7,59 @@ header {
 
 .buttons {
     margin-top: 2.5rem;
-    @include d-flex(row, space-evenly, center);
+    display: grid;
+    grid-template-columns: 140px 140px 140px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 
     button {
         font-size: larger;
-        padding: 15px;
+        text-align: center;
+        width: 140px;
+        height: 50px;
+        background-color: $primary_color;
+        border-style: none;
+        border-radius: 1rem;
+        box-shadow: 2px 2px 5px;
+        cursor: pointer;
+        user-select: none;
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    h1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    button:hover {
+        background-color: $secondary_color;
+    }
+
+    button:active {
+        width: 135px;
+        height: 45px;
+    }
+}
+
+.offers {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.ad {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 305px 305px 305px;
+    grid-template-rows: 215px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
 }
