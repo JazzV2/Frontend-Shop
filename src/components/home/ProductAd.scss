@@ -1,20 +1,24 @@
 @import "/src/mixins";
 @import "/src/variables";
+@import "/src/functions";
 
 .card {
-    width: 300px;
-    height: 210px;
+    width: $card_width;
+    height: $card_heigth;
     background-color: $primary_color;
     @include d-flex(column, flex-start, center);
     border-radius: 1rem;
     box-shadow: 2px 2px 5px;
     cursor: pointer;
     margin: auto;
+    font-size: $font_card_size;
+    transition: all 1s;
 
     img {
-        width: 300px;
-        height: 150px;
+        width: $card_width;
+        height: $photo_heigth;
         border-radius: 1rem 1rem 0 0;
+        transition: all 1s;
     }
 
     h3 {
@@ -23,11 +27,12 @@
 }
 
 .card:hover {
-    width: 305px;
-    height: 215px;
+    width: scale($card_width);
+    height: scale($card_heigth);
+    font-size: scale($font_card_size);
 
     img {
-        width: 305px;
-        height: 155px;
+        width: scale($card_width);
+        height: scale($photo_heigth);
     }
 }

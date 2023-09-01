@@ -1,0 +1,15 @@
+@import "/src/mixins";
+
+.product {
+    width: 900px;
+    height: 250px;
+    @include d-flex(row, space-between, flex-start);
+    background-color: rgb(240, 240, 237);
+    margin-bottom: 1rem;
+
+    img {
+        width: 300px;
+        height: 250px;
+        margin-right: 1rem;
+    }
+}

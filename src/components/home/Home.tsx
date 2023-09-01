@@ -4,6 +4,8 @@ import Navbar from "../navbar/Navbar";
 import ProductAd from "./ProductAd";
 import { IProduct } from "../../types/GlobalTypes";
 import httpModule from "../../helpers/http.module";
+import Header from "../../header/Header";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -25,7 +27,7 @@ const Home = () => {
   }, []);
 
   const createAd = (data: IProduct[]) => {
-    let componentList = [];
+    let componentList:JSX.Element[] = [];
     let lengthOfList = data.length;
     let numberToCreate = 3;
 
@@ -50,19 +52,16 @@ const Home = () => {
 
   return (
     <div>
-      <header>
-        <h1>Electronic Store</h1>
-      </header>
+      <Header />
       <Navbar />
       <div className="contener">
-        <p>Welcome to our store. Here you can buy any RTV or AGD item.</p>
         <div className="buttons">
-          <button className="left">Go to store</button>
+          <Link to="/store" ><button>Go to store</button></Link>
           <h1>or</h1>
-          <button className="right">Log up/in</button>
+          <button>Log up/in</button>
         </div>
         <div className="offers">
-          <h1>Today's Offers</h1>
+          <h1>Today's New Offers</h1>
           <div className="ad">
             {loading ? (
               <h1>Loading</h1>

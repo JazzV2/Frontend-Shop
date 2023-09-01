@@ -1,0 +1,7 @@
+@function scale($dimension) {
+    @return $dimension*1.2;
+}
+
+@function scaleBy($dimension, $multiplier) {
+    @return $dimension*$multiplier;
+}

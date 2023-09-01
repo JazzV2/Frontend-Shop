@@ -5,6 +5,7 @@ const Navbar = () => {
 
   const links = [
     {href: "/", label: "Home"},
+    {href: "/store", label: "Store"},
     {href: "/basket", label: "Basket"},
     {href: "/account", label: "Account"},
     {href: "/info", label: "Info"}
